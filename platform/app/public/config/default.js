@@ -301,4 +301,20 @@ window.config = {
   //     );
   //   },
   // },
+  whiteLabeling: {
+    createLogoComponentFn: function (React) {
+      return React.createElement(
+        'a',
+        {
+          target: '_self',
+          rel: 'noopener noreferrer',
+          href: '/',
+        },
+        React.createElement('img', {
+          src: './jrxlogo.png',
+          className: 'h-12 w-auto object-contain', // ✅ 개선된 스타일
+        })
+      );
+    },
+  },
 };
