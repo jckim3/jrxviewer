@@ -33,3 +33,11 @@ function AboutModalDefault() {
 export default {
   'ohif.aboutModal': AboutModalDefault,
 };
+
+// export default {
+//   'ohif.aboutModal': {
+//     title: 'About JRX Viewer', // ✅ 타이틀 바꾸는 부분
+//     content: AboutModalDefault,
+//     containerClassName: 'max-w-md',
+//   },
+// };
