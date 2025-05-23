@@ -294,6 +294,8 @@ function WorkList({
       );
     };
 
+    const allowedModeIds = ['basic-dev-mode']; // ✅ 보여줄 모드 id만 명시
+
     return {
       dataCY: `studyRow-${studyInstanceUid}`,
       clickableCY: studyInstanceUid,
@@ -377,83 +379,93 @@ function WorkList({
         >
           <div className="flex flex-row gap-2">
             {(appConfig.groupEnabledModesFirst
-              ? appConfig.loadedModes.sort((a, b) => {
-                  const isValidA = a.isValidMode({
-                    modalities: modalities.replaceAll('/', '\\'),
-                    study,
-                  }).valid;
-                  const isValidB = b.isValidMode({
-                    modalities: modalities.replaceAll('/', '\\'),
-                    study,
-                  }).valid;
+              ? appConfig.loadedModes
+                  //.filter(mode => allowedModeIds.includes(mode.id)) // 👈 추가
+                  .sort((a, b) => {
+                    const isValidA = a.isValidMode({
+                      modalities: modalities.replaceAll('/', '\\'),
+                      study,
+                    }).valid;
+                    const isValidB = b.isValidMode({
+                      modalities: modalities.replaceAll('/', '\\'),
+                      study,
+                    }).valid;
 
-                  return isValidB - isValidA;
-                })
+                    return isValidB - isValidA;
+                  })
               : appConfig.loadedModes
-            ).map((mode, i) => {
-              const modalitiesToCheck = modalities.replaceAll('/', '\\');
+            )
+              .filter(mode => mode.displayName === 'Basic Viewer') // ✅ 이것만 남기고
+              .map((mode, i) => {
+                // console.log('mode loaded:', {
+                //   id: mode.id,
+                //   displayName: mode.displayName,
+                //   routeName: mode.routeName,
+                // });
+                const modalitiesToCheck = modalities.replaceAll('/', '\\');
 
-              const { valid: isValidMode, description: invalidModeDescription } = mode.isValidMode({
-                modalities: modalitiesToCheck,
-                study,
-              });
-              // TODO: Modes need a default/target route? We mostly support a single one for now.
-              // We should also be using the route path, but currently are not
-              // mode.routeName
-              // mode.routes[x].path
-              // Don't specify default data source, and it should just be picked up... (this may not currently be the case)
-              // How do we know which params to pass? Today, it's just StudyInstanceUIDs and configUrl if exists
-              const query = new URLSearchParams();
-              if (filterValues.configUrl) {
-                query.append('configUrl', filterValues.configUrl);
-              }
-              query.append('StudyInstanceUIDs', studyInstanceUid);
-              preserveQueryParameters(query);
+                const { valid: isValidMode, description: invalidModeDescription } =
+                  mode.isValidMode({
+                    modalities: modalitiesToCheck,
+                    study,
+                  });
+                // TODO: Modes need a default/target route? We mostly support a single one for now.
+                // We should also be using the route path, but currently are not
+                // mode.routeName
+                // mode.routes[x].path
+                // Don't specify default data source, and it should just be picked up... (this may not currently be the case)
+                // How do we know which params to pass? Today, it's just StudyInstanceUIDs and configUrl if exists
+                const query = new URLSearchParams();
+                if (filterValues.configUrl) {
+                  query.append('configUrl', filterValues.configUrl);
+                }
+                query.append('StudyInstanceUIDs', studyInstanceUid);
+                preserveQueryParameters(query);
 
-              return (
-                mode.displayName && (
-                  <Link
-                    className={isValidMode ? '' : 'cursor-not-allowed'}
-                    key={i}
-                    to={`${mode.routeName}${dataPath || ''}?${query.toString()}`}
-                    onClick={event => {
-                      // In case any event bubbles up for an invalid mode, prevent the navigation.
-                      // For example, the event bubbles up when the icon embedded in the disabled button is clicked.
-                      if (!isValidMode) {
-                        event.preventDefault();
-                      }
-                    }}
-                    // to={`${mode.routeName}/dicomweb?StudyInstanceUIDs=${studyInstanceUid}`}
-                  >
-                    {/* TODO revisit the completely rounded style of buttons used for launching a mode from the worklist later */}
-                    <Button
-                      type={ButtonEnums.type.primary}
-                      size={ButtonEnums.size.medium}
-                      disabled={!isValidMode}
-                      startIconTooltip={
-                        !isValidMode ? (
-                          <div className="font-inter flex w-[206px] whitespace-normal text-left text-xs font-normal text-white">
-                            {invalidModeDescription}
-                          </div>
-                        ) : null
-                      }
-                      startIcon={
-                        isValidMode ? (
-                          <Icons.LaunchArrow className="!h-[20px] !w-[20px] text-black" />
-                        ) : (
-                          <Icons.LaunchInfo className="!h-[20px] !w-[20px] text-black" />
-                        )
-                      }
-                      onClick={() => {}}
-                      dataCY={`mode-${mode.routeName}-${studyInstanceUid}`}
-                      className={isValidMode ? 'text-[13px]' : 'bg-[#222d44] text-[13px]'}
+                return (
+                  mode.displayName && (
+                    <Link
+                      className={isValidMode ? '' : 'cursor-not-allowed'}
+                      key={i}
+                      to={`${mode.routeName}${dataPath || ''}?${query.toString()}`}
+                      onClick={event => {
+                        // In case any event bubbles up for an invalid mode, prevent the navigation.
+                        // For example, the event bubbles up when the icon embedded in the disabled button is clicked.
+                        if (!isValidMode) {
+                          event.preventDefault();
+                        }
+                      }}
+                      // to={`${mode.routeName}/dicomweb?StudyInstanceUIDs=${studyInstanceUid}`}
                     >
-                      {mode.displayName}
-                    </Button>
-                  </Link>
-                )
-              );
-            })}
+                      {/* TODO revisit the completely rounded style of buttons used for launching a mode from the worklist later */}
+                      <Button
+                        type={ButtonEnums.type.primary}
+                        size={ButtonEnums.size.medium}
+                        disabled={!isValidMode}
+                        startIconTooltip={
+                          !isValidMode ? (
+                            <div className="font-inter flex w-[206px] whitespace-normal text-left text-xs font-normal text-white">
+                              {invalidModeDescription}
+                            </div>
+                          ) : null
+                        }
+                        startIcon={
+                          isValidMode ? (
+                            <Icons.LaunchArrow className="!h-[20px] !w-[20px] text-black" />
+                          ) : (
+                            <Icons.LaunchInfo className="!h-[20px] !w-[20px] text-black" />
+                          )
+                        }
+                        onClick={() => {}}
+                        dataCY={`mode-${mode.routeName}-${studyInstanceUid}`}
+                        className={isValidMode ? 'text-[13px]' : 'bg-[#222d44] text-[13px]'}
+                      >
+                        {mode.displayName}
+                      </Button>
+                    </Link>
+                  )
+                );
+              })}
           </div>
         </StudyListExpandedRow>
       ),
