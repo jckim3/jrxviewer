@@ -25,6 +25,9 @@ window.config = {
     // above, the number of requests can be go a lot higher.
     prefetch: 25,
   },
+  investigationalUseDialog: {
+    option: 'never',
+  },
   // filterQueryParam: false,
   // Defines multi-monitor layouts
   multimonitor: [
