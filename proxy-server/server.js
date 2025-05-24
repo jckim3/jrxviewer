@@ -20,6 +20,6 @@ app.use(
 );
 
 // 서버 실행 및 포트 확인 메시지 출력
-app.listen(PORT, () => {
-  console.log(`🚀 Proxy server running at http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`🚀 Proxy server 0000 running at http://localhost:${PORT}`);
 });

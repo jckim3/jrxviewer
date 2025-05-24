@@ -1,7 +1,20 @@
 {
   "name": "ohif-monorepo-root",
   "private": true,
-  "main": "electron/main.js",
+  "main": "start.js",
+  "bin": "start.js",
+  "pkg": {
+    "targets": [
+      "node18-win-x64"
+    ],
+    "outputPath": "dist-exe",
+    "scripts": [
+      "proxy-server/server.js"
+    ],
+    "assets": [
+      "platform/app/dist/**/*"
+    ]
+  },
   "workspaces": {
     "packages": [
       "platform/app",
