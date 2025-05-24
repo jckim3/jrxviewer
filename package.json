@@ -1,6 +1,7 @@
 {
   "name": "ohif-monorepo-root",
   "private": true,
+  "main": "electron/main.js",
   "workspaces": {
     "packages": [
       "platform/app",
@@ -73,7 +74,9 @@
     "lerna:restore": "./netlify-lerna-restore.sh",
     "lerna:customVersion": "node version.mjs",
     "link-list": "npm ls --depth=0 --link=true",
-    "dev:with-proxy": "concurrently \"nodemon --config proxy-server/nodemon.json\" \"lerna run dev:viewer --stream\""
+    "dev:with-proxy": "concurrently \"nodemon --config proxy-server/nodemon.json\" \"lerna run dev:viewer --stream\"",
+    "start": "electron .",
+    "start:dev": "yarn run dev:with-proxy"
   },
   "dependencies": {
     "execa": "^8.0.1"
@@ -101,6 +104,7 @@
     "concurrently": "^9.1.2",
     "cypress": "14.1.0",
     "cypress-file-upload": "^5.0.8",
+    "electron": "^36.3.1",
     "istanbul": "0.4.5",
     "nodemon": "^3.1.10",
     "nyc": "^17.1.0",

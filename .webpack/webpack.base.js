@@ -78,7 +78,10 @@ module.exports = (env, argv, { SRC_DIR, ENTRY }) => {
     },
     output: {
       // clean: true,
-      publicPath: '/',
+      // publicPath: '/',
+       path: ...,
+      filename: ...,
+      publicPath: './',
     },
     context: SRC_DIR,
     stats: {
