@@ -1,0 +1,5 @@
+{
+  "watch": ["proxy-server/server.js"],
+  "ext": "js",
+  "exec": "node proxy-server/server.js"
+}
