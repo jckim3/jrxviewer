@@ -227,9 +227,14 @@ window.config = {
         // wadoUriRoot: 'http://localhost:8042/dicom-web',
         // qidoRoot: 'http://localhost:8042/dicom-web',
         // wadoRoot: 'http://localhost:8042/dicom-web',
-        wadoUriRoot: 'http://localhost:8080/dicom-web',
-        qidoRoot: 'http://localhost:8080/dicom-web',
-        wadoRoot: 'http://localhost:8080/dicom-web',
+        // 자기자신만 접근
+        // wadoUriRoot: 'http://localhost:8080/dicom-web',
+        // qidoRoot: 'http://localhost:8080/dicom-web',
+        // wadoRoot: 'http://localhost:8080/dicom-web',
+        wadoUriRoot: 'http://192.168.0.143:8080/dicom-web',
+        qidoRoot: 'http://192.168.0.143:8080/dicom-web',
+        wadoRoot: 'http://192.168.0.143:8080/dicom-web',
+
         qidoSupportsIncludeField: true,
         supportsReject: true,
         dicomUploadEnabled: true,
