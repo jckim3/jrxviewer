@@ -13,7 +13,8 @@ app.use(cors());
 app.use(
   '/dicom-web',
   createProxyMiddleware({
-    target: 'http://localhost:8042', // 실제 Orthanc DICOM 서버 주소
+    // exe로 빌드하면 localhost가 IPv6 (::1)로 인식되면서 연결이 거절되는 경우가 있습니다.
+    target: 'http://127.0.0.1:8042', // 실제 Orthanc DICOM 서버 주소
     changeOrigin: true, // Origin 헤더를 대상 서버 주소로 변경 (CORS 우회용)
     // pathRewrite 옵션 없음 → 요청 경로 그대로 유지
   })
