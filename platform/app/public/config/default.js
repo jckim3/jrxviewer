@@ -1,4 +1,8 @@
 /** @type {AppTypes.Config} */
+const url = new URL(window.location.origin);
+url.port = '8080';
+
+const proxyOrigin = url.origin; // 'http://192.168.0.143:8080'
 
 window.config = {
   name: 'config/default.js',
@@ -231,9 +235,12 @@ window.config = {
         // wadoUriRoot: 'http://localhost:8080/dicom-web',
         // qidoRoot: 'http://localhost:8080/dicom-web',
         // wadoRoot: 'http://localhost:8080/dicom-web',
-        wadoUriRoot: 'http://192.168.0.143:8080/dicom-web',
-        qidoRoot: 'http://192.168.0.143:8080/dicom-web',
-        wadoRoot: 'http://192.168.0.143:8080/dicom-web',
+        // wadoUriRoot: 'http://192.168.0.143:8080/dicom-web',
+        // qidoRoot: 'http://192.168.0.143:8080/dicom-web',
+        // wadoRoot: 'http://192.168.0.143:8080/dicom-web',
+        wadoUriRoot: proxyOrigin + '/dicom-web',
+        qidoRoot: proxyOrigin + '/dicom-web',
+        wadoRoot: proxyOrigin + '/dicom-web',
 
         qidoSupportsIncludeField: true,
         supportsReject: true,
