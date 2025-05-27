@@ -63,3 +63,6 @@ tests/playwright-report/
 
 # Executables
 dist-exe/
+
+#exe file
+jrxviewer.exe
