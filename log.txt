@@ -1,0 +1,104 @@
+[2025-05-26T04:36:09.315Z] [DEBUG] Proxy path: C:\Users\jckim\source\repos\jrxviewer\proxy-server\server.js
+[2025-05-26T04:36:09.484Z] 🚀 Proxy Server Running.
+[2025-05-26T04:36:09.485Z] [DEBUG] dist path: C:\Users\jckim\source\repos\jrxviewer\platform\app\dist
+[2025-05-26T04:36:09.541Z] 🖥️ Viewer available at http://localhost:8090
+[2025-05-26T04:36:09.555Z] 🚀 Proxy server 0000 running at http://localhost:8080
+[2025-05-26T04:36:11.374Z] (node:1108) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-05-26T04:40:08.705Z] ❌ No license key entered.
+[2025-05-26T04:40:08.707Z] 🚫 License check failed. Exiting...
+[2025-05-26T04:40:24.027Z] ❌ No license key entered.
+[2025-05-26T04:40:24.029Z] 🚫 License check failed. Exiting...
+[2025-05-26T04:42:45.173Z] ❌ Failed to prompt for license:
+[2025-05-26T04:42:45.175Z] 🚫 License check failed. Exiting...
+[2025-05-26T04:44:34.925Z] ❌ No license key entered.
+[2025-05-26T04:44:34.927Z] 🚫 License check failed. Exiting...
+[2025-05-26T04:45:43.690Z] ❌ Failed to prompt for license:
+[2025-05-26T04:45:43.692Z] 🚫 License check failed. Exiting...
+[2025-05-26T04:46:18.536Z] ❌ No license key entered.
+[2025-05-26T04:46:37.152Z] ❌ No license key entered.
+[2025-05-26T04:46:37.157Z] [DEBUG] Proxy path: C:\Users\jckim\source\repos\jrxviewer\proxy-server\server.js
+[2025-05-26T04:46:37.355Z] 🚀 Proxy Server Running.
+[2025-05-26T04:46:37.356Z] [DEBUG] dist path: C:\Users\jckim\source\repos\jrxviewer\platform\app\dist
+[2025-05-26T04:46:37.407Z] 🖥️ Viewer available at http://localhost:8090
+[2025-05-26T04:46:37.422Z] 🚀 Proxy server 0000 running at http://localhost:8080
+[2025-05-26T04:46:40.009Z] (node:25356) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+[2025-05-27T03:45:14.603Z] 🚀 Starting check License...
+[2025-05-27T03:46:04.635Z] 🚀 Starting check License...
+[2025-05-27T03:46:04.638Z] 🚀 Read License file
+[2025-05-27T03:46:04.638Z] [DEBUG] Read key from file or env:
+[2025-05-27T03:46:06.581Z] ❌ Failed to prompt for license:
+[2025-05-27T03:46:06.582Z] [DEBUG] Stack trace:
+[2025-05-27T03:46:06.583Z] 🚀 End check License...
+[2025-05-27T03:46:06.584Z] 🚫 License check failed. Exiting...
+[2025-05-27T03:52:27.538Z] 🚀 Starting check License...
+[2025-05-27T03:52:27.541Z] 🚀 Read License file
+[2025-05-27T03:52:27.542Z] [DEBUG] Read key from file or env:
+[2025-05-27T03:52:29.359Z] ❌ Failed to prompt for license:
+[2025-05-27T03:52:29.360Z] [DEBUG] Stack trace:
+[2025-05-27T03:52:29.360Z] 🚀 End check License...
+[2025-05-27T03:52:29.361Z] 🚫 License check failed. Exiting...
+[2025-05-27T03:52:57.783Z] 🚀 Starting check License...
+[2025-05-27T03:52:57.785Z] 🚀 Read License file
+[2025-05-27T03:52:57.786Z] [DEBUG] License file path:
+[2025-05-27T03:52:57.786Z] [DEBUG] Read key from file or env:
+[2025-05-27T03:52:59.614Z] ❌ Failed to prompt for license:
+[2025-05-27T03:52:59.615Z] [DEBUG] Stack trace:
+[2025-05-27T03:52:59.617Z] 🚀 End check License...
+[2025-05-27T03:52:59.619Z] 🚫 License check failed. Exiting...
+[2025-05-27T03:54:16.056Z] 🚀 Starting check License...
+[2025-05-27T03:54:16.058Z] 🚀 Read License file
+[2025-05-27T03:54:16.059Z] [DEBUG] getKeyFromFileOrEnv() called
+[2025-05-27T03:54:16.059Z] [DEBUG] License file path:
+[2025-05-27T03:54:16.060Z] [DEBUG] Read key from file or env:
+[2025-05-27T03:54:17.970Z] ❌ Failed to prompt for license:
+[2025-05-27T03:54:17.971Z] [DEBUG] Stack trace:
+[2025-05-27T03:54:17.972Z] 🚀 End check License...
+[2025-05-27T03:54:17.972Z] 🚫 License check failed. Exiting...
+[2025-05-27T03:55:19.343Z] 🚀 Starting check License...
+[2025-05-27T03:55:19.345Z] 🚀 Read License file
+[2025-05-27T03:55:19.346Z] [DEBUG] getKeyFromFileOrEnv() called
+[2025-05-27T03:55:19.346Z] [DEBUG] License file path:
+[2025-05-27T03:55:19.347Z] [DEBUG] Read key from file or env:
+[2025-05-27T03:55:21.206Z] ❌ Failed to prompt for license:
+[2025-05-27T03:55:21.207Z] [DEBUG] Stack trace:
+[2025-05-27T03:55:21.208Z] 🚀 End check License...
+[2025-05-27T03:55:21.210Z] 🚫 License check failed. Exiting...
+[2025-05-27T03:56:37.764Z] 🚀 Starting check License...
+[2025-05-27T03:56:37.766Z] 🚀 Read License file
+[2025-05-27T03:56:37.767Z] [DEBUG] getKeyFromFileOrEnv() called
+[2025-05-27T03:56:37.767Z] [DEBUG] cwd:
+[2025-05-27T03:56:37.768Z] [DEBUG] License file path:
+[2025-05-27T03:56:37.769Z] [DEBUG] Read key from file or env:
+[2025-05-27T03:56:39.534Z] ❌ Failed to prompt for license:
+[2025-05-27T03:56:39.535Z] [DEBUG] Stack trace:
+[2025-05-27T03:56:39.536Z] 🚀 End check License...
+[2025-05-27T03:56:39.537Z] 🚫 License check failed. Exiting...
+[2025-05-27T03:59:11.425Z] 🚀 Starting check License...
+[2025-05-27T03:59:11.428Z] [DEBUG] process.cwd():
+[2025-05-27T03:59:11.428Z] [DEBUG] __dirname:
+[2025-05-27T03:59:11.429Z] 🚀 Read License file
+[2025-05-27T03:59:11.430Z] [DEBUG] getKeyFromFileOrEnv() called
+[2025-05-27T03:59:11.431Z] [DEBUG] cwd:
+[2025-05-27T03:59:11.431Z] [DEBUG] License file path:
+[2025-05-27T03:59:11.432Z] [DEBUG] Read key from file or env:
+[2025-05-27T03:59:13.294Z] ❌ Failed to prompt for license:
+[2025-05-27T03:59:13.295Z] [DEBUG] Stack trace:
+[2025-05-27T03:59:13.296Z] 🚀 End check License...
+[2025-05-27T03:59:13.297Z] 🚫 License check failed. Exiting...
+[2025-05-27T03:59:29.691Z] 🚀 Starting check License...
+[2025-05-27T03:59:29.693Z] [DEBUG] process.cwd():
+[2025-05-27T03:59:29.694Z] [DEBUG] __dirname:
+[2025-05-27T03:59:29.694Z] 🚀 Read License file
+[2025-05-27T03:59:29.695Z] [DEBUG] getKeyFromFileOrEnv() called
+[2025-05-27T03:59:29.695Z] [DEBUG] cwd:
+[2025-05-27T03:59:29.696Z] [DEBUG] License file path:
+[2025-05-27T03:59:29.697Z] [DEBUG] Read key from file or env:
+[2025-05-27T03:59:31.581Z] ❌ Failed to prompt for license:
+[2025-05-27T03:59:31.583Z] [DEBUG] Stack trace:
+[2025-05-27T03:59:31.584Z] 🚀 End check License...
+[2025-05-27T03:59:31.585Z] 🚫 License check failed. Exiting...
+[2025-05-27T04:00:49.657Z] 🚀 Starting check License...
+[2025-05-27T04:00:49.659Z] [DEBUG] process.cwd():
+[2025-05-27T04:00:49.660Z] [DEBUG] __dirname:
